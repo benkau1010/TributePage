@@ -1,0 +1,70 @@
+#flex-fun {
+  max-width: 600px;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.child img {
+  height: 100px;
+  margin: 10px 0px;
+}
+
+.child {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.child:nth-child(3n+1) {
+  background-color: red;
+  flex: 2 1 600px;
+}
+
+.child:nth-child(3n+2), .child:nth-child(3n+3) {
+  background-color: blue;
+  flex: 2 1 300px;
+}
+
+body {
+  background-image: url("https://uproxx.com/wp-content/uploads/2023/09/Smash-Mouth-Steve-Harwell-All-Star-Video-top.jpg?w=1024&h=437&crop=1");
+  background-repeat: no-repeat;
+  background-size: 2000px 1000px;
+}
+
+.rotate {
+  animation: rotation 5s;
+}
+
+.linear {
+  animation-timing-function: linear;
+}
+
+.infinite {
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.child:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  text-align: center;
+  display: block;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+}
